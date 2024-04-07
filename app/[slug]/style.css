@@ -1,0 +1,132 @@
+/* TASK 1 */
+.container {
+  background-color: deepskyblue;
+  height: 100vh;
+  width: 100%;
+}
+
+.text {
+  /* METHOD 1 */
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+
+  /* METHOD 2 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* TASK 2 */
+.table-container {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #d305f0;
+}
+
+.table-container .grid-container {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+
+  @media only screen and (min-width: 650px) and (max-width: 1279px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: auto;
+  }
+}
+
+.cell {
+  height: 100px;
+  border: 1px solid white;
+  width: 100%;
+  color: #fff;
+  position: relative;
+}
+
+.cell .tooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: #9302a8;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.cell:hover .tooltip {
+  visibility: visible;
+}
+
+.details-table-container {
+  min-height: 100vh;
+  height: 100%;
+  padding: 50px;
+  position: relative;
+}
+
+.details-table-container .loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(70, 70, 70, 0.5);
+  color: #fff;
+  font-weight: bold;
+}
+.details-table-container .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.search-bar {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search-bar .search-box {
+  height: 40px;
+  margin: 0 0 0 10px;
+  padding: 0 10px;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+.input {
+  padding: 5px;
+}

@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
-import "./style.css";
 
-const CenterDiv = () => {
+const CenterDiv: React.FC = () => {
   return (
     <div className="container">
       <div className="text">Center This</div>
